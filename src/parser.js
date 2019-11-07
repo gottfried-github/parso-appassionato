@@ -1,3 +1,5 @@
+const {TooMuchOpen} = require("./errors.js")
+
 function parseNodes(sequence, closeNode, parseNodes) {
   // log("parseNodes", sequence)
   let open = sequence.nextOpen()
@@ -22,3 +24,5 @@ function closeNode(sequence, parseNodes, closeNode) { // , parseNode
 
   return closeNode(sequence)
 }
+
+module.exports = {parseNodes, closeNode}
